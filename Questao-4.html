@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bandeiras</title>
+    <style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: lightgray;
+    }
+    
+    .bandeira-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .bandeira {
+        width: 150px;
+        height: 100px;
+        position: relative;
+        transition: transform 0.3s;
+        border: 1px solid black;
+    }
+    
+    .bandeira::after {
+        content: attr(data-country);
+        position: absolute;
+        bottom: -30px;
+        width: 100%;
+        text-align: center;
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+    
+    .bandeira:hover {
+        transform: scale(1.1);
+    }
+    
+    .bandeira:hover::after {
+        opacity: 1;
+    }
+    
+    /* Japão */
+    .bandeira.japao {
+        display: flex;
+        background: white;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .circulo {
+        border-radius: 50%;
+        background-color: red;
+        width: 60px;
+        height: 60px;
+    }
+    
+    /* Países Baixos */
+    .bandeira.paises-baixos {
+        background: linear-gradient(to bottom, red 33.33%, white 33.33% 66.66%, blue 66.66%);
+    }
+    
+    /* Itália */
+    .bandeira.italia {
+        background: linear-gradient(to right, green 33.33%, white 33.33% 66.66%, red 66.66%);
+    }
+
+    @media (max-width: 500px) {
+    .bandeira-container {
+        flex-direction: column;
+    }
+}
+    
+    </style>
+</head>
+<body>
+    <div class="bandeira-container">
+        <div class="bandeira italia" data-country="Itália"></div>
+        <div class="bandeira japao" data-country="Japão">
+            <div class="circulo"></div>
+        </div>
+        <div class="bandeira paises-baixos" data-country="Países Baixos"></div>
+    </div>
+</body>
+</html>

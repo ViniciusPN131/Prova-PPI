@@ -1,0 +1,19 @@
+1 - Você digita a URL, conecta com o servidor, o servidor responde com o conteúdo HTML, CSS, JS ai o navegador processa o HTML, carrega recursos adicionais, renderiza a página e executa
+
+2 - HTML não é uma linguagem de programação. Ela define a estrutura dos conteudos. CSS também não é uma linguagem de programação, é uma linguagem de estilo usada para descrever a apresentação de documentos escritos em HTML. JavaScript é de fato uma linguagem de programação.
+
+3a - da para colocalo no elemento html usando o atributo style ou da de colocar na tag style no head do codigo ou usar uma tag link pra chamar um arquivo css. O maior impacto é a manuntençao, mas usar um arquivo separado facilita pois sera possivel usar em mais de um doc html e é mais rapido.
+
+3b - seletor sao como nos definimos oq queremos aplicar o css
+ex: 
+.bandeira {
+        width: 150px;
+        height: 100px;
+        position: relative;
+        transition: transform 0.3s;
+        border: 1px solid black;
+    }
+
+.bandeira significa que eu vou alterar as propriedades css dos elementos com classe bandeira
+
+3c - podemos definir o posicionamento no codigo css ou ele seta por padrao a ordem que esta no codigo html.
